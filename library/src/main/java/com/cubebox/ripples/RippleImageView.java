@@ -40,11 +40,13 @@ import android.support.annotation.ColorRes;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+
+import com.cubebox.ripples.listener.OnClickConfirmListener;
+import com.cubebox.ripples.listener.OnRippleCompleteListener;
 
 
 /**
@@ -581,16 +583,6 @@ public class RippleImageView extends ImageView {
         this.onClickConfirmListener = onClickConfirmListener;
     }
 
-    /**
-     * Defines a callback called at the end of the Ripple effect
-     */
-    public interface OnRippleCompleteListener {
-        void onComplete(RippleImageView rippleView);
-    }
-
-    public interface OnClickConfirmListener {
-        void onConfirmClick(View v);
-    }
 
     public PressBgType getPressBgType() {
         return PressBgType.values()[pressBgType];

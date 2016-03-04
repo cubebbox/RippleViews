@@ -8,6 +8,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cubebox.ripples.RippleLinearLayout;
+import com.cubebox.ripples.listener.OnClickConfirmListener;
+import com.cubebox.ripples.listener.OnRippleCompleteListener;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView textView1 = (TextView) findViewById(R.id.rect_child1);
         final TextView textView2 = (TextView) findViewById(R.id.rect_child2);
 
-        rippleView.setOnClickConfirmListener(new RippleLinearLayout.OnClickConfirmListener() {
+        rippleView.setOnClickConfirmListener(new OnClickConfirmListener() {
             @Override
             public void onConfirmClick(View v) {
                 startActivity(new Intent(MainActivity.this, RecyclerActivity.class));
@@ -41,12 +43,12 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(new Intent(MainActivity.this, RecyclerActivity.class));
 //            }
 //        });
-//        rippleView.setOnRippleCompleteListener(new RippleView.OnRippleCompleteListener() {
-//            @Override
-//            public void onComplete(RippleView rippleView) {
-//                Toast.makeText(MainActivity.this, "click ", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        rippleView.setOnRippleCompleteListener(new OnRippleCompleteListener() {
+            @Override
+            public void onComplete(View v) {
+                Toast.makeText(MainActivity.this, "click ", Toast.LENGTH_SHORT).show();
+            }
+        });
 //        textView1.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
