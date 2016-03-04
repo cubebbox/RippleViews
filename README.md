@@ -18,28 +18,49 @@ the stickyScrollView can Free sliding and customize all insert and exit the anim
 
 ![GIF f](https://github.com/cubebbox/RippleViews/blob/master/img/8.gif)
 
-Declare an StickyView inside your XML layout file. You also need to other layouts for contentLayout and floatLayout:
+Declare an RippleView inside your XML layout file. You also need more:
 
-    <com.cubebox.library.StickyView
-        android:id="@+id/act_roll_view_stickyView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:background="@color/transparent"
-        app:contentLayout="@layout/roll_content_view"
-        app:floatLayout="@layout/float_view"
-        app:releaseTouch="true"
-        app:startHeight="200dp"
-        app:stickyBackground="@color/white" />
+  <com.cubebox.ripples.RippleImageView
+        android:id="@+id/more"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/more2"
+        android:background="@android:color/holo_blue_dark"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_edit"
+        ripple:rv_centered="true"
+        ripple:rv_holdBgInPressing="true"
+        ripple:rv_pressBgType="circleFitMin" />
         
 
 ### Customization
-You can change contentLayout and floatLayout of the view
-app:startHeight ------the height in scrollView init
-app:releaseTouch ------Whether to release touch events
-app:stickyBackground ------When the view is suspended, the underlying background color
+
+ <attr name="rv_alpha" format="integer" />
+        <attr name="rv_rippleDuration" format="integer" />
+        <attr name="rv_zoomDuration" format="integer" />
+        <attr name="rv_rippleColor" format="color" />
+        <attr name="rv_pressColor" format="color" />
+        <attr name="rv_centered" format="boolean" />
+        <attr name="rv_pressBgType" format="enum">
+            <enum name="rect" value="0" />
+            <enum name="circleFitMin" value="1" />
+            <enum name="circleFitMax" value="2" />
+        </attr>
+        <attr name="rv_ripplePadding" format="dimension" />
+        <attr name="rv_zoom" format="boolean" />
+        <attr name="rv_zoomScale" format="float" />
+        <attr name="rv_pressBgEnable" format="boolean" />
+        <attr name="rv_holdBgInPressing" format="boolean" />
 
 
 ### Troubleshooting
 
-If you want to use the StickyScrollView with EditText, you have to set android:windowSoftInputMode="adjustPan" to prevent the parent view to redraw itself .
+ rippleView.setOnClickConfirmListener(new RippleLinearLayout.OnClickConfirmListener() {
+            @Override
+            public void onConfirmClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecyclerActivity.class));
+            }
+        });
+
