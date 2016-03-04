@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.cubebox.ripples.RippleImageView
+        android:id="@+id/more"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/more2"
+        android:background="@android:color/holo_blue_dark"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_edit"
+        ripple:rv_centered="true"
+        ripple:rv_holdBgInPressing="true"
+        ripple:rv_pressBgType="circleFitMin" />
+
+    <com.cubebox.ripples.RippleImageView
+        android:id="@+id/more2"
+        android:layout_width="150dp"
+        android:layout_height="?android:actionBarSize"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/more2"
+        android:background="@android:color/holo_blue_dark"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_edit"
+        ripple:rv_centered="true"
+        ripple:rv_holdBgInPressing="true"
+        ripple:rv_pressBgType="circleFitMax" />
+
+    <com.cubebox.ripples.RippleButton
+        android:id="@+id/more3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="#00000000"
+        android:text="click me"
+        ripple:rv_centered="true"
+        ripple:rv_holdBgInPressing="true"
+        ripple:rv_pressBgType="circleFitMax">
+
+    </com.cubebox.ripples.RippleButton>
+
+    <com.cubebox.ripples.RippleLinearLayout
+        android:id="@+id/rect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+        android:background="@android:color/holo_orange_dark"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        ripple:rv_centered="false"
+        ripple:rv_pressBgEnable="true"
+        ripple:rv_pressColor="#000000">
+
+        <TextView
+            android:id="@+id/rect_child1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_purple"
+            android:gravity="center"
+            android:text="Hello World!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/rect_child2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:text="Hello World!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </com.cubebox.ripples.RippleLinearLayout>
+
+
+</LinearLayout>
