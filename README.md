@@ -21,7 +21,7 @@ the stickyScrollView can Free sliding and customize all insert and exit the anim
 ### Usage
 
 Declare an RippleView inside your XML layout file. You also need more:
-
+``` xml
   <com.cubebox.ripples.RippleImageView
         android:id="@+id/more"
         android:layout_width="?android:actionBarSize"
@@ -35,10 +35,10 @@ Declare an RippleView inside your XML layout file. You also need more:
         ripple:rv_centered="true"
         ripple:rv_holdBgInPressing="true"
         ripple:rv_pressBgType="circleFitMin" />
-        
+```   
 
 ### Customization
-
+``` java
  <attr name="rv_alpha" format="integer" />
         <attr name="rv_rippleDuration" format="integer" />
         <attr name="rv_zoomDuration" format="integer" />
@@ -55,14 +55,22 @@ Declare an RippleView inside your XML layout file. You also need more:
         <attr name="rv_zoomScale" format="float" />
         <attr name="rv_pressBgEnable" format="boolean" />
         <attr name="rv_holdBgInPressing" format="boolean" />
-
+```  
 
 ### Troubleshooting
-
+``` java
  rippleView.setOnClickConfirmListener(new RippleLinearLayout.OnClickConfirmListener() {
             @Override
             public void onConfirmClick(View v) {
                 startActivity(new Intent(MainActivity.this, RecyclerActivity.class));
             }
         });
-
+      
+  If you want to know when the RippleViews is finished, you can set a listener on your view
+        rippleView.setOnRippleCompleteListener(new OnRippleCompleteListener() {
+            @Override
+            public void onComplete(View v) {
+                Toast.makeText(MainActivity.this, "click ", Toast.LENGTH_SHORT).show();
+            }
+        });
+```
