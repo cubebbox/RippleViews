@@ -3,13 +3,20 @@ ripple views for layout or button
 
 the stickyScrollView can Free sliding and customize all insert and exit the animation
 
-### Example
+### Example very smooth
 
-![GIF a](https://github.com/cubebbox/StickyScrollView/blob/master/a.gif)
+![GIF a](https://github.com/cubebbox/RippleViews/blob/master/img/3.gif)
 
-without header
 
-![GIF b](https://github.com/cubebbox/StickyScrollView/blob/master/b.gif)
+![GIF b](https://github.com/cubebbox/RippleViews/blob/master/img/4.gif)
+
+![GIF c](https://github.com/cubebbox/RippleViews/blob/master/img/5.gif)
+
+![GIF d](https://github.com/cubebbox/RippleViews/blob/master/img/6.gif)
+
+![GIF e](https://github.com/cubebbox/RippleViews/blob/master/img/7.gif)
+
+![GIF f](https://github.com/cubebbox/RippleViews/blob/master/img/8.gif)
 
 Declare an StickyView inside your XML layout file. You also need to other layouts for contentLayout and floatLayout:
 
