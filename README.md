@@ -18,6 +18,8 @@ the stickyScrollView can Free sliding and customize all insert and exit the anim
 
 ![GIF f](https://github.com/cubebbox/RippleViews/blob/master/img/8.gif)
 
+### Usage
+
 Declare an RippleView inside your XML layout file. You also need more:
 
   <com.cubebox.ripples.RippleImageView
