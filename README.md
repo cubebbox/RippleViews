@@ -1,9 +1,12 @@
 # RippleViews
 ripple views for layout or button
 
-the stickyScrollView can Free sliding and customize all insert and exit the animation
+ reference from RippleEffect (https://github.com/traex/RippleEffect) , add background type hold background .
+ change draw method,make it very smooth.
 
-### Example very smooth
+### Example 
+
+rippleviews is very smooth.
 
 ![GIF a](https://github.com/cubebbox/RippleViews/blob/master/img/3.gif)
 
