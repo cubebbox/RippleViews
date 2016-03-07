@@ -143,7 +143,6 @@ public class RippleImageView extends ImageView {
         pressPaint.setColor(pressBgColor);
         pressPaint.setAlpha(pressBgAlpha);
 
-
         this.setWillNotDraw(false);
 
         gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
