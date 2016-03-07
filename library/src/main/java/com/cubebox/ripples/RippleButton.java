@@ -30,6 +30,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
@@ -128,7 +129,7 @@ public class RippleButton extends Button {
         ripplePadding = typedArray.getDimensionPixelSize(R.styleable.RippleView_rv_ripplePadding, ripplePadding);
         zoomScale = typedArray.getFloat(R.styleable.RippleView_rv_zoomScale, zoomScale);
         zoomDuration = typedArray.getInt(R.styleable.RippleView_rv_zoomDuration, zoomDuration);
-        pressBgAlpha = rippleAlpha / 2;
+        pressBgAlpha = rippleAlpha / 3;
         typedArray.recycle();
 
         circlePaint = new Paint();
@@ -143,6 +144,7 @@ public class RippleButton extends Button {
         pressPaint.setColor(pressBgColor);
         pressPaint.setAlpha(pressBgAlpha);
 
+        setBackgroundColor(Color.TRANSPARENT);
 
         this.setWillNotDraw(false);
 

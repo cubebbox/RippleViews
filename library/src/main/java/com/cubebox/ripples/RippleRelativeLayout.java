@@ -128,7 +128,7 @@ public class RippleRelativeLayout extends RelativeLayout {
         ripplePadding = typedArray.getDimensionPixelSize(R.styleable.RippleView_rv_ripplePadding, ripplePadding);
         zoomScale = typedArray.getFloat(R.styleable.RippleView_rv_zoomScale, zoomScale);
         zoomDuration = typedArray.getInt(R.styleable.RippleView_rv_zoomDuration, zoomDuration);
-        pressBgAlpha = rippleAlpha / 2;
+        pressBgAlpha = rippleAlpha / 3;
         typedArray.recycle();
 
         circlePaint = new Paint();
